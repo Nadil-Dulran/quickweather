@@ -38,10 +38,13 @@
         </div>
         <script>
             const apiKey = "94b8a2ddcb9f5a935b6ab62b2bfd72b4";
-            const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=bangalore";
+            const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
-            async function checkWeather(){
-                const response = await fetch(apiUrl + `&appid=${apiKey}`);
+            const searchBox = document.querySelector(".search input");
+            const searchBtn = document.querySelector(".search button");
+
+            async function checkWeather(city){
+                const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
                 var data = await response.json();
 
                 console.log(data);
@@ -52,7 +55,11 @@
                 document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
             }
 
-            checkWeather();
+            searchBtn.addEventListener("click", ()=>{
+                checkWeather(searchBox.value);
+            });
+
+            checkWeather("New York");
         </script>
         
     </body>
