@@ -1,11 +1,11 @@
 # Quick Weather ⚡️☁️
 
-A simple weather app built with HTML, CSS, and JavaScript. It fetches current weather data from the OpenWeather API and displays temperature, humidity, wind speed, and an icon that reflects conditions.
+A simple weather app built with HTML, CSS, and JavaScript. It fetches current weather data from the OpenWeather API and displays temperature, humidity, wind speed and an icon that reflects weather condition.
 
 ## Features
 - City search with button click
 - Shows temperature (°C), humidity (%), and wind speed
-- Weather icons for Clouds, Clear, Rain, Drizzle, Mist, Snow
+- Weather icons for Clouds, Clear, Rain, Drizzle, Mist & Snow
 - Basic error state for invalid city names
 
 ## Project Structure
@@ -46,7 +46,7 @@ python3 -m http.server 5500
 ## Usage
 1. Enter a city name in the input.
 2. Click the search button.
-3. The card updates with the city, temperature, humidity, wind speed, and the appropriate icon. Invalid cities show an error message.
+3. The card updates with the city, temperature, humidity, wind speed and the appropriate weather icon. Invalid cities show an error message.
 
 ## Notes & Troubleshooting
 - Units: The app requests metric units. OpenWeather returns wind speed in m/s for metric. If you want km/h, multiply by 3.6 before displaying.
@@ -54,8 +54,8 @@ python3 -m http.server 5500
 - API rate limits: If requests stop working temporarily, you may have hit free-tier limits.
 - Mixed content: Requests use HTTPS, so it should work fine when served locally or from file.
 
-## Ideas for Improvement
+<!-- ## Ideas for Improvement
 - Convert wind speed to km/h properly
 - Add Enter-key search and debouncing
 - Show loading states and better error messages
-- Add geolocation and unit toggles (°C/°F)
+- Add geolocation and unit toggles (°C/°F) -->
