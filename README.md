@@ -1,4 +1,4 @@
-# Quick Weather 
+# Quick Weather ⚡️☁️
 
 A simple weather app built with HTML, CSS, and JavaScript. It fetches current weather data from the OpenWeather API and displays temperature, humidity, wind speed, and an icon that reflects conditions.
 
