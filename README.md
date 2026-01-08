@@ -11,7 +11,7 @@ A simple weather app built with HTML, CSS, and JavaScript. It fetches current we
 ## Project Structure
 - [index.html](index.html): Markup and app script
 - [style.css](style.css): Styles
-- [images/](images): Icons like `search.png`, `clouds.png`, `clear.png`, `rain.png`, `drizzle.png`, `mist.png`, `snow.png`
+- [images/](images): Icons 
 
 ## Prerequisites
 - An OpenWeather API key: https://openweathermap.org/api
