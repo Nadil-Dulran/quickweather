@@ -101,6 +101,16 @@
          
             }
 
+            const debouncedCheckWeather = debounce(checkWeather, 600);
+
+            searchBox.addEventListener("keydown", (e) => {
+                if (e.key === "Enter") {
+                    const v = searchBox.value.trim();
+                    if (v) {
+                        checkWeather(v);
+                    }
+                }
+            });
 
             searchBox.addEventListener("input", () => {
                 const v = searchBox.value.trim();
