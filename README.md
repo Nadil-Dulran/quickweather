@@ -4,6 +4,7 @@ A simple weather app built with HTML, CSS, and JavaScript. It fetches current we
 
 ## Features
 - City search with button click
+- Enter-key search and debouncing feature
 - Shows temperature (°C), humidity (%), and wind speed
 - Weather icons for Clouds, Clear, Rain, Drizzle, Mist & Snow
 - Basic error state for invalid city names
@@ -53,9 +54,3 @@ python3 -m http.server 5500
 - Invalid city: Shows the error section and hides the weather card.
 - API rate limits: If requests stop working temporarily, you may have hit free-tier limits.
 - Mixed content: Requests use HTTPS, so it should work fine when served locally or from file.
-
-<!-- ## Ideas for Improvement
-- Convert wind speed to km/h properly
-- Add Enter-key search and debouncing
-- Show loading states and better error messages
-- Add geolocation and unit toggles (°C/°F) -->
