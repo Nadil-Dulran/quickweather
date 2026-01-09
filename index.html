@@ -47,6 +47,14 @@
             const searchBtn = document.querySelector(".search button");
             const weatherIcon = document.querySelector(".weather-icon");
 
+            function debounce(fn, delay = 800) {
+                let t;
+                return (...args) => {
+                    clearTimeout(t);
+                    t = setTimeout(() => fn(...args), delay);
+                };
+            }
+
             async function checkWeather(city){
                 const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
 
@@ -92,6 +100,14 @@
                 }
          
             }
+
+
+            searchBox.addEventListener("input", () => {
+                const v = searchBox.value.trim();
+                if (v) {
+                    debouncedCheckWeather(v);
+                }
+            });
 
             searchBtn.addEventListener("click", ()=>{
                 checkWeather(searchBox.value);
